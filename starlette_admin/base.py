@@ -228,9 +228,7 @@ class BaseAdmin:
             PackageLoader("starlette_admin", "templates"),
             PrefixLoader(
                 {
-                    "@starlette-admin": PackageLoader(
-                        "starlette_admin", "templates"
-                    ),
+                    "@starlette-admin": PackageLoader("starlette_admin", "templates"),
                 }
             ),
             *self._additional_template_loaders,
