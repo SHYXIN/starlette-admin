@@ -252,7 +252,9 @@ class BaseAdmin:
         templates.env.filters["get_admin_config"] = (
             self.auth_provider.get_admin_config if self.auth_provider else None
         )
-        templates.env.filters["tojson"] = lambda data, indent=None: json.dumps(data, default=str, indent=indent)
+        templates.env.filters["tojson"] = lambda data, indent=None: json.dumps(
+            data, default=str, indent=indent
+        )
         templates.env.filters["file_icon"] = get_file_icon
         templates.env.filters["to_model"] = (
             lambda identity: self._find_model_from_identity(identity)
