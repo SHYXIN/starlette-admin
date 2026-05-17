@@ -543,4 +543,6 @@ class TestViews:
             response = client.get("/admin/api/falsy-model?pks=99")
             assert response.status_code == 200
             item = response.json()["items"][0]
-            assert item["json_field"] == val, f"Expected {val!r}, got {item['json_field']!r}"
+            assert (
+                item["json_field"] == val
+            ), f"Expected {val!r}, got {item['json_field']!r}"
