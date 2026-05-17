@@ -106,9 +106,7 @@ class BaseSQLAModelConverter(BaseModelConverter):
                     ):
                         # Determine required from the local foreign key column(s).
                         # If all local columns are NOT NULL, the relationship is required.
-                        required = all(
-                            not col.nullable for col in attr.local_columns
-                        )
+                        required = all(not col.nullable for col in attr.local_columns)
                         converted_fields.append(
                             HasOne(attr.key, identity=identity, required=required)
                         )
