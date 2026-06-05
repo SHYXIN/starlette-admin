@@ -11,7 +11,8 @@ Please include:
 - A description of the vulnerability and its potential impact
 - Steps to reproduce or a minimal proof-of-concept
 - The version of starlette-admin affected
-You can expect an acknowledgement within **72 hours** and a fix or mitigation plan within **14 days**, depending on complexity.
+  
+We will acknowledge your report and work on a fix or mitigation as soon as possible.
 
 ## Scope
 
